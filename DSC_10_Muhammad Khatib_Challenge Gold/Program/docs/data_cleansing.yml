@@ -1,0 +1,27 @@
+tags:
+  - name: Pembersihan Data
+post:
+  description: Unggah dan bersihkan data CSV
+  consumes:
+    - multipart/form-data
+  parameters:
+    - name: file
+      in: formData
+      description: File CSV yang akan diunggah
+      required: true
+      type: file
+responses:
+  '200':
+    description: Data berhasil dibersihkan
+  '400':
+    description: Permintaan tidak valid
+  '500':
+    description: Kesalahan Internal Server
+
+get:
+  description: Unduh file CSV yang sudah dibersihkan
+  responses:
+    '200':
+      description: File berhasil diunduh
+    '500':
+      description: Kesalahan Internal Server

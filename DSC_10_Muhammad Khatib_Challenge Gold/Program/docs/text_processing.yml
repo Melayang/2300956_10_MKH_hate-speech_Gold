@@ -1,0 +1,16 @@
+tags:
+  - name : Text Processing
+get:
+  description: Text yang akan diproses
+parameters:
+  - name: text
+    in: query
+    required: true
+    type: string
+responses:
+  '200':
+    description: Successful Responses
+  '400':
+    description: Bad Request
+  '500':
+    description: Internal Server Error
